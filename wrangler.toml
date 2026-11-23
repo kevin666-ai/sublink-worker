@@ -5,7 +5,13 @@ compatibility_date = "2024-07-24"
 compatibility_flags = ["nodejs_compat"]
 
 kv_namespaces = [
-  { binding = "SUBLINK_KV", id = "8943789ed0af49659f887fc740d11240" }
+  { binding = "SUBLINK_KV", id = "0125e4e010f04939a57b3388297643e7" }
+]
+
+# Custom domains: apex serves the same Worker as sub (apex had no DNS at all)
+routes = [
+  { pattern = "leonchini.com", custom_domain = true },
+  { pattern = "sub.leonchini.com", custom_domain = true }
 ]
 
 [assets]
